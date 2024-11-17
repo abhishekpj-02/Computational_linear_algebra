@@ -1,0 +1,23 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Define the user and product ratings vectors
+user_ratings = np.array([4, 3, 5])
+product_ratings = np.array([2, 5, 4])
+
+# Compute the outer product
+predicted_ratings = np.outer(user_ratings, product_ratings)
+
+# Print the predicted ratings matrix
+print("Predicted Ratings Matrix:")
+display(predicted_ratings)
+
+# Plot the result
+plt.imshow(predicted_ratings, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.title('Predicted Ratings Matrix (Recommendation System)')
+plt.xlabel('Product Ratings')
+plt.ylabel('User Ratings')
+plt.xticks(ticks=np.arange(len(product_ratings)), labels=product_ratings)
+plt.yticks(ticks=np.arange(len(user_ratings)), labels=user_ratings)
+plt.show()

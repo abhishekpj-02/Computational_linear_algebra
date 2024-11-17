@@ -1,0 +1,12 @@
+## Pseudocode for solution of system of linear equations
+
+
+```python
+FUNCTION solution(A,b):
+  create the augmented matrix: k=[A/b]
+  Reduce in Row Reduced Echelon form
+  Rank = no. of  non zero rows of RREF
+  If= rank(k)!=Rank(A):
+  print (sysytem is inconsistent)
+  
+```

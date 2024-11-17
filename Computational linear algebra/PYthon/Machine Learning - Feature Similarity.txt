@@ -1,0 +1,12 @@
+import numpy as np
+
+# Simulated feature vectors (2D array) using NumPy
+features1 = np.random.rand(100, 10)
+features2 = np.random.rand(100, 10)
+
+# Compute inner product for each feature vector
+inner_products = np.einsum('ij,ij->i', features1, features2) # use Einstien's sum
+
+# Display results
+print("Inner Products of Feature Vectors:")
+display(inner_products)
